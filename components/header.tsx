@@ -10,6 +10,7 @@ import { useState } from "react"
 import { cn } from "@/lib/utils"
 import { useLanguage } from "@/components/language-provider"
 import LanguageSwitcher from "@/components/language-switcher"
+import Image from "next/image"
 
 export default function Header() {
   const { cartItems } = useCart()
@@ -28,7 +29,7 @@ export default function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white">
+    <header className="sticky top-0 z-50 w-full border-b bg-[#00355F] text-white">
       <div className="container flex h-16 items-center">
         <Sheet>
           <SheetTrigger asChild>
@@ -53,7 +54,7 @@ export default function Header() {
         </Sheet>
 
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <span className="text-xl font-bold text-cyan-600">Xcite</span>
+        <Image  src="/logo.svg" alt="" width={70} height={70}/>
         </Link>
 
         <div className="hidden md:flex md:gap-6 md:items-center">

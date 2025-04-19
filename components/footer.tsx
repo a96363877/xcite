@@ -3,17 +3,18 @@
 import Link from "next/link"
 import { Facebook, Instagram, Twitter } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
+import Image from "next/image"
 
 export default function Footer() {
   const { t } = useLanguage()
 
   return (
-    <footer className="border-t bg-background">
+    <footer className="border-t bg-[#00355F] text-white">
       <div className="container py-8 md:py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center space-x-2">
-              <span className="text-xl font-bold text-cyan-600">Xcite</span>
+            <Image src="/logo.svg" alt="" width={70} height={70}/>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
               {t("Your one-stop shop for electronics, home appliances, and more.")}

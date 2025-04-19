@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+*{
+  font-family: "Zain", sans-serif;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -46,29 +49,6 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 196 100% 40%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-
-  /* RTL Support */
-  [dir="rtl"] .rtl-flip {
-    transform: scaleX(-1);
-  }
-
-  [dir="rtl"] .rtl-rotate-180 {
-    transform: rotate(180deg);
-  }
-
-  [dir="rtl"] .rtl-mirror {
-    --tw-scale-x: -1;
-    transform: var(--tw-transform);
   }
 }
 
