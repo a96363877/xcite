@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
 import { useCart } from "@/components/cart-provider"
-import { useToast } from "@/components/ui/use-toast"
+import { useToast } from "@/hooks/use-toast"
 
 export default function CartPage() {
   const { cartItems, removeFromCart, updateQuantity, totalPrice } = useCart()

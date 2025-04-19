@@ -48,23 +48,16 @@ export default function BannerSlider({ banners }: { banners: Banner[] }) {
         >
           {banners.map((banner) => (
             <div key={banner.id} className="w-full flex-shrink-0">
-              <div className="relative h-[200px] sm:h-[300px] md:h-[400px] w-full">
-                <Image
+              <div className="relative min-w-[250px] md:h-[300px] w-full">
+                <img
                   src={
                     banner.image || `/placeholder.svg?height=800&width=1600&query=promotional banner ${banner.title}`
                   }
                   alt={banner.title}
-                  fill
                   className="object-cover"
-                  priority
+                  
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex flex-col justify-center p-6 md:p-12">
-                  <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-white mb-2 md:mb-4">{banner.title}</h2>
-                  <p className="text-sm md:text-lg text-white mb-4 md:mb-6 max-w-md">{banner.description}</p>
-                  <Button asChild className="w-fit">
-                    <Link href={banner.href}>{banner.buttonText}</Link>
-                  </Button>
-                </div>
+                 
               </div>
             </div>
           ))}

@@ -10,10 +10,10 @@ export default function Home() {
   const { t, dir } = useLanguage()
 
   const categories = [
-    { name: t("Phones & Accessories"), image: "/modern-communication-hub.png", href: "/category/phones-accessories" },
-    { name: t("TV & Accessories"), image: "/vintage-television-living-room.png", href: "/category/tv-accessories" },
-    { name: t("Computers & Tablets"), image: "/modern-workspace.png", href: "/category/computers-tablets" },
-    { name: t("Air Conditioning"), image: "/window-unit-cooling.png", href: "/category/air-conditioning" },
+    { name: t("Phones & Accessories"), image: "https://cdn.media.amplience.net/i/xcite/742025-XciteSeason-CBlocks-Phones?img404=default&w=640&qlt=75&fmt=auto", href: "/category/phones-accessories" },
+    { name: t("TV & Accessories"), image: "https://cdn.media.amplience.net/i/xcite/742025-XciteSeason-CBlocks-TV?img404=default&w=640&qlt=75&fmt=auto", href: "/category/tv-accessories" },
+    { name: t("Computers & Tablets"), image: "https://cdn.media.amplience.net/i/xcite/742025-XciteSeason-CBlocks-Laptop?img404=default&w=640&qlt=75&fmt=auto", href: "/category/computers-tablets" },
+    { name: t("Air Conditioning"), image: "/https://cdn.media.amplience.net/i/xcite/742025-XciteSeason-CBlocks-AC?img404=default&w=640&qlt=75&fmt=auto", href: "/category/air-conditioning" },
     { name: t("Home Appliances"), image: "/modern-kitchen-essentials.png", href: "/category/home-appliances" },
     {
       name: t("Kitchen Appliances"),
@@ -31,7 +31,7 @@ export default function Home() {
   const banners = [
     {
       id: 1,
-      image: "/banner-summer-sale.jpg",
+      image: "/banner.jpg",
       title: t("Summer Sale"),
       description: t("Up to 50% off on selected items"),
       buttonText: t("Shop Now"),
@@ -39,7 +39,7 @@ export default function Home() {
     },
     {
       id: 2,
-      image: "/banner-new-arrivals.jpg",
+      image: "/banner1.jpg",
       title: t("New Arrivals"),
       description: t("Check out the latest tech gadgets"),
       buttonText: t("Discover"),
@@ -47,7 +47,7 @@ export default function Home() {
     },
     {
       id: 3,
-      image: "/banner-ac-sale.jpg",
+      image: "/banner2.jpg",
       title: t("Beat the Heat"),
       description: t("Special offers on air conditioners"),
       buttonText: t("Shop AC"),
@@ -61,7 +61,7 @@ export default function Home() {
       name: t('TCL Smart TV 55" 4K UHD'),
       price: 129.9,
       originalPrice: 149.9,
-      image: "/smart-tv-living-room.png",
+      image: "https://cdn.media.amplience.net/i/xcite/742025-XciteSeason-CBlocks-Phones?img404=default&w=640&qlt=75&fmt=auto",
     },
     {
       id: "2",
@@ -117,12 +117,11 @@ export default function Home() {
           <Link key={category.name} href={category.href} className="block">
             <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="relative h-24 sm:h-32">
-                <Image
+                <img
                   src={
                     category.image || `/placeholder.svg?height=200&width=200&query=${encodeURIComponent(category.name)}`
                   }
                   alt={category.name}
-                  fill
                   className="object-cover"
                 />
               </div>
@@ -149,10 +148,9 @@ export default function Home() {
               <Link key={i} href={`/product/${i + 11}`}>
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                   <div className="relative h-28 sm:h-32">
-                    <Image
+                    <img
                       src={`/affordable-tech-essentials.png?height=150&width=150&query=budget electronics item ${i + 1}`}
                       alt={`Budget Item ${i + 1}`}
-                      fill
                       className="object-contain"
                     />
                   </div>
@@ -181,10 +179,9 @@ export default function Home() {
               <Link key={i} href={`/product/${i + 17}`}>
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                   <div className="relative h-28 sm:h-32">
-                    <Image
+                    <img
                       src={`/wireless-noise-canceling-headphones.png?height=150&width=150&query=mid-range electronics item ${i + 1}`}
                       alt={`Mid-range Item ${i + 1}`}
-                      fill
                       className="object-contain"
                     />
                   </div>
@@ -213,13 +210,12 @@ export default function Home() {
               <Card className="overflow-hidden h-full hover:shadow-md transition-shadow">
                 <CardContent className="p-3">
                   <div className="relative h-40 mb-3">
-                    <Image
+                    <img
                       src={
                         product.image ||
                         `/placeholder.svg?height=300&width=300&query=${encodeURIComponent(product.name) || "/placeholder.svg"}`
                       }
                       alt={product.name}
-                      fill
                       className="object-contain"
                     />
                   </div>
@@ -252,13 +248,12 @@ export default function Home() {
               <Card className="overflow-hidden h-full hover:shadow-md transition-shadow">
                 <CardContent className="p-3">
                   <div className="relative h-40 mb-3">
-                    <Image
+                    <img
                       src={
                         product.image ||
                         `/placeholder.svg?height=300&width=300&query=${encodeURIComponent(product.name) || "/placeholder.svg"}`
                       }
                       alt={product.name}
-                      fill
                       className="object-contain"
                     />
                   </div>
@@ -291,13 +286,12 @@ export default function Home() {
               <Card className="overflow-hidden h-full hover:shadow-md transition-shadow">
                 <CardContent className="p-3">
                   <div className="relative h-40 mb-3">
-                    <Image
+                    <img
                       src={
                         product.image ||
                         `/placeholder.svg?height=300&width=300&query=${encodeURIComponent(product.name) || "/placeholder.svg"}`
                       }
                       alt={product.name}
-                      fill
                       className="object-contain"
                     />
                   </div>
